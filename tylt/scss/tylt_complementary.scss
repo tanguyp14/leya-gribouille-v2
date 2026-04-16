@@ -1,0 +1,232 @@
+.hats-upsell-product {
+    border: 12px double pink;
+    border-image: url('cadrebois_.png') 25 25 round;
+    min-height: 134px;
+    max-width: 400px;
+    padding: 10px;
+    display: none;
+    grid-template-columns: 120px 170px auto;
+    grid-template-rows: 40px 50px;
+    max-width: 400px;
+    align-items: center;
+
+    &.visible {
+        display: grid;
+    }
+
+    div:has(product-form) {
+        position: relative;
+        grid-row: 2;
+        grid-column: 2 / 4;
+
+        product-form {
+            margin: 0 !important;
+
+            button {
+                margin-bottom: 0px;
+                font-size: 15px;
+                padding: 5px 10px;
+                min-height: 20px;
+            }
+        }
+    }
+
+    p:has(.money) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    img {
+        width: 100px;
+        grid-row: 1 / 3;
+        grid-column: 1;
+    }
+
+    h3 {
+        grid-row: 1;
+        grid-column: 1 / 4;
+        font-size: 1em;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .loading__spinner {
+        position: absolute;
+        transform-origin: center;
+        top: calc(50% - (1.8rem / 2));
+        left: calc(50% - (1.8rem / 2));
+    }
+
+    #stock-error-message {
+        position: relative;
+        grid-row: 3;
+        grid-column: 1 / 4;
+        margin: 0;
+        font-size: 0.8em;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.tylt-complementary {
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            .card {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+
+                &__content {
+                    display: grid;
+
+                    h3 {
+                        a {
+                            text-transform: none;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .card__information {
+                        grid-row: 1;
+                    }
+
+                    .quick-add {
+                        product-form {
+                            button {
+                                min-height: 30px;
+                                line-height: normal;
+                                font-size: 1em;
+                                width: 15em;
+                            }
+                        }
+
+                    }
+
+                    .price {
+                        &__container {
+                            .price__regular {
+                                font-weight: 500;
+                                display: flex;
+                                align-items: center;
+
+                                .price-item {
+                                    font-size: 1em;
+                                    color: black;
+                                }
+
+                                &::before {
+                                    content: '+';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.complementary-tylt {
+                display: none;
+                margin: 20px 0;
+
+                &.visible {
+                    display: flex;
+                }
+
+                &.cadre {
+                    .card__media {
+                        .media {
+                            border: 7px double pink;
+                            border-image: url('cadrebois_.png') 25 25 round;
+                        }
+                    }
+
+                    &.horizontal {
+                        .card__media {
+                            .media {
+                                border: 5px double pink;
+                                border-image: url('cadrebois_.png') 25 25 round;
+                            }
+                        }
+                    }
+
+                    &.c10x15 {
+                        .card__media {
+                            &:before {
+                                content: "";
+                                border: 7px double pink;
+                                border-image: url('cadrebois_.png') 25 25 round;
+                                width: 73%;
+                                left: 14%;
+                                top: 9%;
+                                height: 83%;
+                                position: absolute;
+                                display: flex;
+                                z-index: 10;
+                            }
+
+                            .media {
+                                border: none;
+                            }
+                        }
+
+                        &.cp {
+                            .card__media {
+                                &:before {
+                                    content: "";
+                                    width: 94%;
+                                    left: 3%;
+                                    top: 6%;
+                                    height: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.baguette {
+
+                    .card__media {
+                        overflow: visible;
+
+                        &:before {
+                            content: '';
+                            background-image: url('baguette_.webp');
+                            background-position: top center;
+                            background-size: cover;
+                            width: 100%;
+                            height: 50px;
+                            position: absolute;
+                            display: flex;
+                            z-index: 10;
+                            top: -25px;
+                        }
+
+                        &:after {
+                            content: '';
+                            background-image: url('baguette_.webp');
+                            width: 100%;
+                            height: 10px;
+                            position: absolute;
+                            background-position: bottom center;
+                            background-size: cover;
+                            display: flex;
+                            z-index: 10;
+                            bottom: -5px;
+                        }
+                    }
+                }
+
+                .card-wrapper {
+                    width: 100%;
+
+                    .card {
+                        display: grid;
+                        grid-template-columns: 100px 1fr;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
