@@ -1,229 +1,191 @@
-.hats-upsell-product {
-    border: 12px double pink;
-    border-image: url('cadrebois_.png') 25 25 round;
-    min-height: 134px;
-    max-width: 400px;
-    padding: 10px;
-    display: none;
-    grid-template-columns: 120px 170px auto;
-    grid-template-rows: 40px 50px;
-    max-width: 400px;
-    align-items: center;
+/* ======================================
+   Produits complémentaires (Cadres & Baguettes)
+   Adapté pour thème Tinker
+   ====================================== */
 
-    &.visible {
-        display: grid;
-    }
+.tylt-complementary {
+    /* Masquer les décorations cadres/baguettes si toggle désactivé */
+    &.hide-frames {
+        li.complementary-tylt {
+            &.cadre .card-gallery {
+                img {
+                    border: none !important;
+                }
 
-    div:has(product-form) {
-        position: relative;
-        grid-row: 2;
-        grid-column: 2 / 4;
+                &::before {
+                    display: none !important;
+                }
+            }
 
-        product-form {
-            margin: 0 !important;
-
-            button {
-                margin-bottom: 0px;
-                font-size: 15px;
-                padding: 5px 10px;
-                min-height: 20px;
+            &.baguette .card-gallery {
+                &::before,
+                &::after {
+                    display: none !important;
+                }
             }
         }
     }
-
-    p:has(.money) {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    img {
-        width: 100px;
-        grid-row: 1 / 3;
-        grid-column: 1;
-    }
-
-    h3 {
-        grid-row: 1;
-        grid-column: 1 / 4;
-        font-size: 1em;
-        margin: 0;
-        text-transform: uppercase;
-    }
-
-    .loading__spinner {
-        position: absolute;
-        transform-origin: center;
-        top: calc(50% - (1.8rem / 2));
-        left: calc(50% - (1.8rem / 2));
-    }
-
-    #stock-error-message {
-        position: relative;
-        grid-row: 3;
-        grid-column: 1 / 4;
-        margin: 0;
-        font-size: 0.8em;
-        text-align: center;
-        width: 100%;
-    }
-}
-
-.tylt-complementary {
     ul {
         display: flex;
         flex-direction: column;
+        gap: 20px;
 
-        li {
-            .card {
+        li.complementary-tylt {
+            display: none;
+            margin: 0;
+
+            &.visible {
+                display: flex;
+            }
+
+            /* Layout horizontal : image à gauche, infos à droite */
+            .tylt-product-card-wrapper {
                 display: grid;
                 grid-template-columns: 100px 1fr;
+                gap: 12px;
+                align-items: center;
+                width: 100%;
+            }
 
-                &__content {
-                    display: grid;
+            /* Image (card-gallery) */
+            .card-gallery {
+                grid-column: 1;
+                grid-row: 1 / -1;
+            }
 
-                    h3 {
-                        a {
-                            text-transform: none;
-                            font-weight: 600;
-                        }
-                    }
+            /* Infos produit */
+            .product-info {
+                display: grid;
+                gap: 8px;
+                grid-column: 2;
+            }
 
-                    .card__information {
-                        grid-row: 1;
-                    }
+            /* Titre produit */
+            .product-title {
+                margin: 0;
+                font-size: 0.9rem;
+                font-weight: 600;
 
-                    .quick-add {
-                        product-form {
-                            button {
-                                min-height: 30px;
-                                line-height: normal;
-                                font-size: 1em;
-                                width: 15em;
-                            }
-                        }
+                a {
+                    text-transform: none;
+                    text-decoration: none;
+                    color: inherit;
 
-                    }
-
-                    .price {
-                        &__container {
-                            .price__regular {
-                                font-weight: 500;
-                                display: flex;
-                                align-items: center;
-
-                                .price-item {
-                                    font-size: 1em;
-                                    color: black;
-                                }
-
-                                &::before {
-                                    content: '+';
-                                }
-                            }
-                        }
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
             }
 
-            &.complementary-tylt {
-                display: none;
-                margin: 20px 0;
+            /* Prix avec préfixe + */
+            .price {
+                font-weight: 500;
+                display: flex;
+                align-items: center;
 
-                &.visible {
-                    display: flex;
+                .price-item {
+                    font-size: 1em;
+                    color: black;
+
+                    &::before {
+                        content: '+';
+                        margin-right: 2px;
+                    }
+                }
+            }
+
+            /* Bouton ajouter au panier */
+            button {
+                min-height: 30px;
+                line-height: normal;
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+
+            /* ==================
+               STYLES CADRE
+               ================== */
+            &.cadre {
+                .card-gallery {
+                    position: relative;
+
+                    img {
+                        border: 7px double pink;
+                        border-image: url('cadrebois_.png') 25 25 round;
+                    }
                 }
 
-                &.cadre {
-                    .card__media {
-                        .media {
+                /* Cadre horizontal : bordure plus fine */
+                &.horizontal {
+                    .card-gallery img {
+                        border-width: 5px;
+                    }
+                }
+
+                /* Cadre 10x15 : bordure via pseudo-élément */
+                &.c10x15 {
+                    .card-gallery {
+                        img {
+                            border: none;
+                        }
+
+                        &::before {
+                            content: "";
                             border: 7px double pink;
                             border-image: url('cadrebois_.png') 25 25 round;
+                            width: 73%;
+                            left: 14%;
+                            top: 9%;
+                            height: 83%;
+                            position: absolute;
+                            z-index: 10;
                         }
                     }
 
-                    &.horizontal {
-                        .card__media {
-                            .media {
-                                border: 5px double pink;
-                                border-image: url('cadrebois_.png') 25 25 round;
-                            }
-                        }
-                    }
-
-                    &.c10x15 {
-                        .card__media {
-                            &:before {
-                                content: "";
-                                border: 7px double pink;
-                                border-image: url('cadrebois_.png') 25 25 round;
-                                width: 73%;
-                                left: 14%;
-                                top: 9%;
-                                height: 83%;
-                                position: absolute;
-                                display: flex;
-                                z-index: 10;
-                            }
-
-                            .media {
-                                border: none;
-                            }
-                        }
-
-                        &.cp {
-                            .card__media {
-                                &:before {
-                                    content: "";
-                                    width: 94%;
-                                    left: 3%;
-                                    top: 6%;
-                                    height: 90%;
-                                }
-                            }
-                        }
+                    /* Ajustement pour carte postale */
+                    &.cp .card-gallery::before {
+                        width: 94%;
+                        left: 3%;
+                        top: 6%;
+                        height: 90%;
                     }
                 }
+            }
 
-                &.baguette {
+            /* ==================
+               STYLES BAGUETTE
+               ================== */
+            &.baguette {
+                .card-gallery {
+                    overflow: visible;
+                    position: relative;
 
-                    .card__media {
-                        overflow: visible;
-
-                        &:before {
-                            content: '';
-                            background-image: url('baguette_.webp');
-                            background-position: top center;
-                            background-size: cover;
-                            width: 100%;
-                            height: 50px;
-                            position: absolute;
-                            display: flex;
-                            z-index: 10;
-                            top: -25px;
-                        }
-
-                        &:after {
-                            content: '';
-                            background-image: url('baguette_.webp');
-                            width: 100%;
-                            height: 10px;
-                            position: absolute;
-                            background-position: bottom center;
-                            background-size: cover;
-                            display: flex;
-                            z-index: 10;
-                            bottom: -5px;
-                        }
+                    /* Baguette du haut */
+                    &::before {
+                        content: '';
+                        background-image: url('baguette_.webp');
+                        background-position: top center;
+                        background-size: cover;
+                        width: 100%;
+                        height: 50px;
+                        position: absolute;
+                        display: flex;
+                        z-index: 10;
+                        top: -25px;
                     }
-                }
 
-                .card-wrapper {
-                    width: 100%;
-
-                    .card {
-                        display: grid;
-                        grid-template-columns: 100px 1fr;
-                        align-items: center;
+                    /* Baguette du bas */
+                    &::after {
+                        content: '';
+                        background-image: url('baguette_.webp');
+                        background-position: bottom center;
+                        background-size: cover;
+                        width: 100%;
+                        height: 10px;
+                        position: absolute;
+                        display: flex;
+                        z-index: 10;
+                        bottom: -5px;
                     }
                 }
             }

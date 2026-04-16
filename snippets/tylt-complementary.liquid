@@ -1,0 +1,102 @@
+<div class="tylt-complementary">
+  <ul class="list-unstyled" role="list">
+    {% assign main_product = product %}
+    {% for handle in complementary %}
+      {% assign current_product = all_products[handle] %}
+      <li class="complementary-tylt{% if main_product.tags contains 'Horizontal' %} horizontal{% endif %}{% if main_product.tags contains 'Carte postal' %} cp{% endif %}{% for tag in current_product.tags %} {{ tag | handleize }}{% endfor %}">
+        {% assign custom_image = '' %}
+
+        {% if current_product.tags contains 'Cadre' %}
+          {% assign custom_image = main_product.featured_image %}
+          {% if current_product.tags contains 'c30x30' %}
+        {% assign custom_ratio = "square" %}
+          {%  elsif main_product.tags contains 'Horizontal' %}
+            {% if main_product.tags contains 'Carte postal' %}
+              {%  assign custom_ratio = "horizontal-cp" %}
+              {% else %}
+                {%  assign custom_ratio = "horizontal" %}
+            {% endif %}
+          {% else %}
+        {% assign custom_ratio = block.settings.image_ratio %}
+          {% endif %}
+        {% elsif current_product.tags contains 'Baguette' %}
+          {% assign custom_image = main_product.featured_image %}
+        {% endif %}
+
+        {% render 'card-product',
+          card_product: current_product,
+          media_aspect_ratio: custom_ratio,
+          show_secondary_image: false,
+          lazy_load: false,
+          skip_styles: false,
+          quick_add: 'standard',
+          section_id: section.id,
+          horizontal_class: true,
+          horizontal_quick_add: false,
+          custom_image: custom_image,
+          show_rating: false
+        %}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function updateVariantDisplay(selectedValue) {
+      const allItems = document.querySelectorAll('.tylt-complementary .complementary-tylt');
+      allItems.forEach((div) => div.classList.remove('visible'));
+
+      const sizeMatch = selectedValue.match(/(\d{2})x(\d{2})/);
+      const baseSize = sizeMatch ? `${sizeMatch[1]}x${sizeMatch[2]}` : null;
+      if (!baseSize) return;
+
+      // Afficher les cadres correspondant à la variante
+      const matchingCadres = document.querySelectorAll(`.tylt-complementary .complementary-tylt.cadre.c${baseSize}`);
+      matchingCadres.forEach((div) => div.classList.add('visible'));
+
+      // Afficher les baguettes si la valeur contient "30" ou "50"
+      if (selectedValue.includes('30')) {
+        document.querySelectorAll(`.tylt-complementary .complementary-tylt.baguette`).forEach((div) => {
+          if ([...div.classList].some((cls) => cls.includes('30'))) {
+            div.classList.add('visible');
+          }
+        });
+      }
+
+      if (selectedValue.includes('50')) {
+        document.querySelectorAll(`.tylt-complementary .complementary-tylt.baguette`).forEach((div) => {
+          if ([...div.classList].some((cls) => cls.includes('50'))) {
+            div.classList.add('visible');
+          }
+        });
+      }
+    }
+
+    function logSelectedVariant(event) {
+      if (event.target.matches('variant-selects fieldset input[type="radio"]')) {
+        console.log('Variant sélectionné :', event.target.value);
+        updateVariantDisplay(event.target.value);
+      }
+    }
+
+    document.addEventListener('change', logSelectedVariant);
+
+    setTimeout(() => {
+      const checkedInput = document.querySelector('variant-selects fieldset input[type="radio"]:checked');
+
+      // ✅ Cas produit SANS variante
+      if (!checkedInput) {
+        console.log('Aucune variante détectée, affichage de tous les produits complémentaires.');
+        document.querySelectorAll('.tylt-complementary .complementary-tylt').forEach((div) => {
+          div.classList.add('visible');
+        });
+        return;
+      }
+
+      // ✅ Cas produit AVEC variante
+      console.log('Variant sélectionné au chargement :', checkedInput.value);
+      updateVariantDisplay(checkedInput.value);
+    }, 500);
+  });
+</script>

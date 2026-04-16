@@ -1,0 +1,245 @@
+{%- doc -%}
+  Affiche les produits complémentaires (cadres et baguettes) basés sur les metafields.
+  Filtre dynamiquement par taille de variante via JavaScript.
+{%- enddoc -%}
+
+<script
+  src="{{ 'tylt-complementary.js' | asset_url }}"
+  type="module"
+  defer
+></script>
+
+{% liquid
+  assign block_settings = block.settings
+  assign main_product = closest.product | default: product
+  assign complementary_handles = main_product.metafields.custom.tylt_product_handle_complementary.value
+%}
+
+{% comment %} DEBUG MODE {% endcomment %}
+{% if block_settings.show_debug and request.design_mode %}
+  <div style="padding: 10px; background: #e3f2fd; border: 1px solid #2196f3; margin: 10px 0;">
+    <strong>🔍 DEBUG:</strong><br>
+    Main product: {{ main_product.title }}<br>
+    Metafield raw: {{ complementary_handles }}<br>
+    Metafield size: {{ complementary_handles.size }}<br>
+    <strong>Use main product image:</strong> {% if block_settings.use_main_product_image %}✅ OUI{% else %}❌ NON{% endif %}<br>
+  </div>
+{% endif %}
+
+{% if complementary_handles != blank and complementary_handles.size > 0 %}
+  {% liquid
+    capture main_product_tags_json
+      echo '['
+      for tag in main_product.tags
+        echo '"' | append: tag | append: '"'
+        unless forloop.last
+          echo ','
+        endunless
+      endfor
+      echo ']'
+    endcapture
+  %}
+
+  <div
+    id="tylt-complementary-{{ block.id }}"
+    class="tylt-complementary{% unless block_settings.use_main_product_image %} hide-frames{% endunless %}"
+    data-main-product-image="{{ main_product.featured_image | image_url: width: 800 }}"
+    data-main-product-tags="{{ main_product_tags_json | escape }}"
+    data-use-main-image="{{ block_settings.use_main_product_image }}"
+    {{ block.shopify_attributes }}
+  >
+    {% if block_settings.heading != blank %}
+      <h3>{{ block_settings.heading }}</h3>
+    {% endif %}
+
+    <ul class="list-unstyled" role="list">
+      {% comment %} DEBUG: Afficher les handles traités {% endcomment %}
+      {% if block_settings.show_debug and request.design_mode %}
+        <div style="padding: 10px; background: #fff3e0; border: 1px solid #ff9800; margin: 10px 0;">
+          <strong>📦 Handles traités:</strong><br>
+          {% for raw_handle in complementary_handles limit: block_settings.max_products %}
+            {% assign clean_handle = raw_handle | remove: 'cm' %}
+            - Raw: "{{ raw_handle }}" → Clean: "{{ clean_handle }}" → Produit: {% if all_products[clean_handle] %}{{ all_products[clean_handle].title }}{% else %}<span style="color: red;">NOT FOUND</span>{% endif %}<br>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% for raw_handle in complementary_handles limit: block_settings.max_products %}
+        {% assign clean_handle = raw_handle | remove: 'cm' %}
+        {% assign current_product = all_products[clean_handle] %}
+        {% if current_product != blank %}
+          <li class="complementary-tylt{% if main_product.tags contains 'Horizontal' %} horizontal{% endif %}{% if main_product.tags contains 'Carte postal' %} cp{% endif %}{% for tag in current_product.tags %} {{ tag | handleize }}{% endfor %}">
+
+            {% comment %} Préparer l'image et le ratio pour cadres/baguettes {% endcomment %}
+            {% assign custom_image = '' %}
+            {% assign custom_ratio = '' %}
+
+            {% comment %} Ne remplacer l'image que si le toggle est activé {% endcomment %}
+            {% if block_settings.use_main_product_image %}
+              {% if current_product.tags contains 'Cadre' %}
+                {% assign custom_image = main_product.featured_image %}
+                {% if current_product.tags contains 'c30x30' %}
+                  {% assign custom_ratio = "square" %}
+                {% elsif main_product.tags contains 'Horizontal' %}
+                  {% if main_product.tags contains 'Carte postal' %}
+                    {% assign custom_ratio = "horizontal-cp" %}
+                  {% else %}
+                    {% assign custom_ratio = "horizontal" %}
+                  {% endif %}
+                {% endif %}
+              {% elsif current_product.tags contains 'Baguette' %}
+                {% assign custom_image = main_product.featured_image %}
+              {% endif %}
+            {% endif %}
+
+            {% comment %} Rendu de la carte produit {% endcomment %}
+            <div class="tylt-product-card-wrapper">
+              {% capture card_content %}
+                <div class="card-gallery">
+                  {% if custom_image != blank %}
+                    {{ custom_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: current_product.title }}
+                  {% else %}
+                    {{ current_product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: current_product.title }}
+                  {% endif %}
+                </div>
+
+                <div class="product-info">
+                  <h4 class="product-title">
+                    <a href="{{ current_product.url }}">{{ current_product.title }}</a>
+                  </h4>
+
+                  <div class="price">
+                    <span class="price-item">{{ current_product.price | money }}</span>
+                  </div>
+
+                  {% form 'product', current_product %}
+                    <input type="hidden" name="id" value="{{ current_product.selected_or_first_available_variant.id }}">
+                    <button type="submit" name="add" class="button button--primary">
+                      {{ 'products.product.add_to_cart' | t }}
+                    </button>
+                  {% endform %}
+                </div>
+              {% endcapture %}
+
+              {{ card_content }}
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% else %}
+  {% comment %} Debug: afficher si le metafield est vide {% endcomment %}
+  {% if block_settings.show_debug and request.design_mode %}
+    <p style="padding: 20px; background: #f0f0f0;">
+      Aucun produit complémentaire configuré. Ajoutez des produits dans le metafield <code>custom.tylt_product_handle_complementary</code>.
+    </p>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "TYLT - Complémentaires",
+  "class": "tylt-complementary-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "default": "Cadres et baguettes"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_main_product_image",
+      "label": "Afficher l'image du produit principal",
+      "info": "Si décoché, affiche l'image du produit complémentaire",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_debug",
+      "label": "🔍 Afficher le mode debug",
+      "info": "Affiche les informations de débogage dans l'éditeur",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Disposition"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "Nombre max de produits",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Apparence"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_color_scheme",
+      "label": "Hériter du schéma de couleurs",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Schéma de couleurs",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Espacement"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Haut",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bas",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "Gauche",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "Droite",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "TYLT - Complémentaires"
+    }
+  ]
+}
+{% endschema %}
