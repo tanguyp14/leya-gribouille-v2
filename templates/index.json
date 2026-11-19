@@ -171,7 +171,7 @@
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3f91c7fd-d395-4d81-9bd9-85db4cc20100",
         "padding-block-start": 10,
         "padding-block-end": 7,
         "gap_between_elements": 24
