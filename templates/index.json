@@ -794,7 +794,7 @@
         "section_width": "full-width",
         "horizontal_alignment": "center",
         "gap": 40,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-464773f4-a825-42d5-b3f1-3cbc85c5ebd8",
         "padding-block-start": 20,
         "padding-block-end": 40
       }
@@ -1184,7 +1184,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "scheme-6",
             "border": "solid",
-            "border_width": 0,
+            "border_width": 2,
             "border_opacity": 100,
             "border_radius": 0
           },
@@ -1311,7 +1311,7 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "image_upload": "shopify://shop_images/DESIGN_ORIGINAUX_37d6c52b-20da-47c8-9843-4bd652e7561e.webp",
+                "image_upload": "shopify://shop_images/DESIGN_ORIGINAUX_7f2d9e29-1f84-49cb-9b4f-de7acf557431.webp",
                 "width": 100,
                 "link": "",
                 "open_in_new_tab": false
@@ -1462,7 +1462,7 @@
               "type": "icon",
               "settings": {
                 "icon": "heart",
-                "image_upload": "shopify://shop_images/IMPRIME_EN_FRANCE_4c4080ed-162d-4fe5-a306-7396ea09ccc1.webp",
+                "image_upload": "shopify://shop_images/IMPRIME_EN_FRANCE.webp",
                 "width": 80,
                 "link": "",
                 "open_in_new_tab": false
@@ -1613,7 +1613,7 @@
               "type": "icon",
               "settings": {
                 "icon": "silhouette",
-                "image_upload": "shopify://shop_images/CREATRICE_INDEPENDANTE_19bbe5e1-5239-4859-9778-17bcc9bf19ea.webp",
+                "image_upload": "shopify://shop_images/CREATRICE_INDEPENDANTE.webp",
                 "width": 80,
                 "link": "",
                 "open_in_new_tab": false
