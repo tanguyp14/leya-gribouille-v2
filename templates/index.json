@@ -105,7 +105,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/BANNIERE_JAPAN_BENTO_1.webp",
+        "image_1": "shopify://shop_images/BANNIERE_3.webp",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
@@ -1028,7 +1028,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Découvrez une <strong>peinture à réaliser soit même créée par Leya Gribouille</strong>. Le design de l’illustration, les <strong>mélanges de peinture</strong> et la <strong>préparation du kit</strong> ont été réalisés avec soin dans mon atelier afin de proposer une expérience créative unique.</p><p>Ce <strong>kit de peinture au numéro </strong>est idéal pour se détendre, développer sa créativité et réaliser facilement une jolie œuvre, même sans expérience en peinture.</p><p>La <strong>taille finale de la peinture est de 24 x 30 cm</strong>, un format parfait pour exposer votre création une fois terminée.</p><p></p><h3>Contenu du kit</h3><ul><li><strong>Affiche à peindre numérotée 300 g (24 x 30 cm)</strong></li><li><strong>Pots de peinture prêts à l’emploi</strong></li><li><strong>Pinceaux</strong></li><li><strong>Modèle de référence pour vous guider</strong></li></ul>",
+                "text": "<p>Découvrez une&nbsp;<strong>peinture à réaliser soit même créée par Leya Gribouille</strong>.&nbsp;Le design de l’illustration, les&nbsp;<strong>mélanges de peinture</strong>&nbsp;et la&nbsp;<strong>préparation du kit</strong>&nbsp;ont été réalisés avec soin dans mon atelier afin de proposer une expérience créative unique.</p><p>Ce&nbsp;<strong>kit de peinture au numéro&nbsp;</strong>est idéal pour se détendre, développer sa créativité et réaliser facilement une jolie œuvre, même sans expérience en peinture.</p><p>La&nbsp;<strong>taille finale de la peinture est de 24 x 30 cm</strong>, un format parfait pour exposer votre création une fois terminée.</p><p></p><h3>Contenu du kit</h3><ul><li><strong>Affiche à peindre numérotée 300 g (24 x 30 cm)</strong></li><li><strong>Pots de peinture prêts à l’emploi</strong></li><li><strong>Pinceaux</strong></li><li><strong>Modèle de référence pour vous guider</strong></li></ul>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
