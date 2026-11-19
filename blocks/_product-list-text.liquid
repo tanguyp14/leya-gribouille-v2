@@ -397,3 +397,21 @@
   ]
 }
 {% endschema %}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-image: url("https://cdn.shopify.com/s/files/1/0934/1861/9203/files/favicon.webp?v=1795128664");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
