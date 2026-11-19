@@ -249,7 +249,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 40,
+                "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -1205,7 +1205,7 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground-heading)",
                 "background": true,
-                "background_color": "#FFFAF5",
+                "background_color": "#fffaf5",
                 "corner_radius": 23,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
