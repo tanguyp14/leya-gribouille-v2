@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/LOGO_INVERSE.webp",
+    "logo": "shopify://shop_images/logo_2_1.webp",
     "logo_inverse": "shopify://shop_images/LEYA_GRIBOUILLE_LOGO_ROUGE_f410983a-6175-4431-9dbc-7c5f520681f1.png",
-    "logo_height": 30,
+    "logo_height": 25,
     "logo_height_mobile": 22,
     "favicon": "shopify://shop_images/LEYA_GRIBOUILLE_LOGO_CARRE_69c92163-b6b3-4e1a-a364-b01215006340.png",
     "type_body_font": "anybody_n4",
