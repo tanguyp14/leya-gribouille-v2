@@ -171,7 +171,7 @@
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
-        "color_scheme": "scheme-3f91c7fd-d395-4d81-9bd9-85db4cc20100",
+        "color_scheme": "scheme-2",
         "padding-block-start": 10,
         "padding-block-end": 7,
         "gap_between_elements": 24
@@ -231,12 +231,11 @@
             "product_list_text_7bi9Fk": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
-              "disabled": true,
               "settings": {
-                "text": "<h3>Best-Seller</h3>",
+                "text": "<h3>T-shirts animal lovers</h3>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h2",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -250,7 +249,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
+                "padding-inline-start": 40,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -289,7 +288,7 @@
                 "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 15,
+                "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -328,7 +327,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 24,
-                "padding-block-end": 24,
+                "padding-block-end": 0,
                 "padding-inline-start": 24,
                 "padding-inline-end": 24
               },
@@ -427,10 +426,10 @@
         "icons_shape": "circle",
         "section_width": "full-width",
         "horizontal_alignment": "center",
-        "gap": 6,
+        "gap": 30,
         "color_scheme": "scheme-1",
-        "padding-block-start": 22,
-        "padding-block-end": 60
+        "padding-block-start": 15,
+        "padding-block-end": 40
       }
     },
     "hero_DriwGK": {
@@ -510,6 +509,7 @@
         "text_Pq6YaQ",
         "button_hpLFi8"
       ],
+      "disabled": true,
       "name": "TITRE BEST SELLER",
       "settings": {
         "media_type_1": "image",
@@ -533,7 +533,7 @@
         "section_width": "page-width",
         "section_height": "auto",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -551,8 +551,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Découvrir tout les best-seller",
-            "link": "shopify://collections/all",
+            "label": "Découvrir tout les BEST-SELLER",
+            "link": "shopify://collections",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
@@ -598,12 +598,11 @@
             "product_list_text_qK4EWG": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
-              "disabled": true,
               "settings": {
                 "text": "<h3>Best-Seller</h3>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h2",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -617,7 +616,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
+                "padding-inline-start": 40,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -656,7 +655,7 @@
                 "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 15,
+                "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -695,7 +694,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 24,
-                "padding-block-end": 24,
+                "padding-block-end": 0,
                 "padding-inline-start": 24,
                 "padding-inline-end": 24
               },
@@ -794,24 +793,10 @@
         "icons_shape": "circle",
         "section_width": "full-width",
         "horizontal_alignment": "center",
-        "gap": 6,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 10,
-        "padding-block-end": 28
-      }
-    },
-    "divider_p8bBYe": {
-      "type": "divider",
-      "name": "t:names.divider_section",
-      "settings": {
-        "color_scheme": "",
-        "section_width": "full-width",
-        "thickness": 1,
-        "corner_radius": "square",
-        "width_percent": 89,
-        "alignment_horizontal": "center",
-        "padding-block-start": 16,
-        "padding-block-end": 16
+        "gap": 40,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 20,
+        "padding-block-end": 40
       }
     },
     "featured_product_information_7Jb3Xz": {
@@ -1109,8 +1094,8 @@
         "limit_details_width": false,
         "gap": 48,
         "color_scheme": "scheme-1",
-        "padding-block-start": 0,
-        "padding-block-end": 30
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
     "collection_list_xpBxCm": {
@@ -1160,7 +1145,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2><em>Les Collections</em></h2>",
+                "text": "<h2>Les Collections</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1208,11 +1193,11 @@
               "type": "collection-title",
               "name": "t:names.collection_title",
               "settings": {
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "custom",
-                "font": "var(--font-heading--family)",
+                "font": "var(--font-accent--family)",
                 "font_size": "1.125rem",
                 "line_height": "tight",
                 "letter_spacing": "loose",
@@ -1220,7 +1205,7 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground-heading)",
                 "background": true,
-                "background_color": "#ff763a",
+                "background_color": "#FFFAF5",
                 "corner_radius": 23,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -1275,7 +1260,7 @@
         "icons_shape": "none",
         "section_width": "page-width",
         "gap": 12,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "padding-block-start": 10,
         "padding-block-end": 21
       }
@@ -1375,7 +1360,7 @@
                 "text_GWxmei": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Designs originaux</strong></h2>",
+                    "text": "<h2>Designs originaux</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1526,7 +1511,7 @@
                 "text_GkDKfW": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Imprimé en France</strong></h2>",
+                    "text": "<h2>Imprimé en France</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1677,7 +1662,7 @@
                 "text_tRVEVr": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2><strong>Créatrice indépendante</strong></h2>",
+                    "text": "<h2>Créatrice indépendante</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1755,7 +1740,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-3f91c7fd-d395-4d81-9bd9-85db4cc20100",
+        "color_scheme": "scheme-2",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -1848,6 +1833,7 @@
         "text_968GFn",
         "button_qMrLQj"
       ],
+      "disabled": true,
       "name": "TITRE AFFICHE",
       "settings": {
         "media_type_1": "image",
@@ -1889,8 +1875,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Voir toutes les affiches",
-            "link": "shopify://collections/all",
+            "label": "Voir toutes les AFFICHES",
+            "link": "shopify://collections/affiches",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
@@ -1936,12 +1922,11 @@
             "product_list_text_YzpazM": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
-              "disabled": true,
               "settings": {
                 "text": "<h3>Affiches</h3>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h2",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -1955,7 +1940,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
+                "padding-inline-start": 40,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -2132,28 +2117,15 @@
         "icons_shape": "circle",
         "section_width": "page-width",
         "horizontal_alignment": "center",
-        "gap": 13,
+        "gap": 30,
         "color_scheme": "scheme-1",
         "padding-block-start": 10,
-        "padding-block-end": 13
-      }
-    },
-    "divider_KcRKd6": {
-      "type": "divider",
-      "name": "t:names.divider_section",
-      "settings": {
-        "color_scheme": "",
-        "section_width": "full-width",
-        "thickness": 1,
-        "corner_radius": "square",
-        "width_percent": 89,
-        "alignment_horizontal": "center",
-        "padding-block-start": 16,
-        "padding-block-end": 16
+        "padding-block-end": 40
       }
     },
     "hero_6CJQRy": {
       "type": "hero",
+      "disabled": true,
       "name": "TITRE Textiles",
       "settings": {
         "media_type_1": "image",
@@ -2195,8 +2167,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Tout découvrir",
-            "link": "shopify://collections/all",
+            "label": "TOUT DÉCOUVRIR",
+            "link": "shopify://collections/textiles",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
@@ -2242,12 +2214,11 @@
             "product_list_text_Y3rBkn": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
-              "disabled": true,
               "settings": {
                 "text": "<h3>Textiles</h3>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h2",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -2261,7 +2232,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
+                "padding-inline-start": 40,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -2438,10 +2409,10 @@
         "icons_shape": "circle",
         "section_width": "full-width",
         "horizontal_alignment": "center",
-        "gap": 12,
+        "gap": 30,
         "color_scheme": "scheme-1",
-        "padding-block-start": 10,
-        "padding-block-end": 30
+        "padding-block-start": 0,
+        "padding-block-end": 40
       }
     }
   },
@@ -2452,13 +2423,11 @@
     "product_list_TNWyG9",
     "hero_DriwGK",
     "product_list_EDUBdR",
-    "divider_p8bBYe",
     "featured_product_information_7Jb3Xz",
     "collection_list_xpBxCm",
     "section_WAGay7",
     "hero_TAUEq3",
     "product_list_rH9FQf",
-    "divider_KcRKd6",
     "hero_6CJQRy",
     "product_list_DNRrUm"
   ]
