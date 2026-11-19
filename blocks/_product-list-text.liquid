@@ -1,9 +1,41 @@
 
 
+
 {% assign placeholder = 'content.featured_products' | t %}
 {% assign placeholder = '<h3>' | append: placeholder | append: '</h3>' %}
 
-{% render 'text', fallback_text: placeholder, block: block %}
+<div class="leya-collection-title">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0934/1861/9203/files/favicon.webp?v=1795128664"
+    alt=""
+    class="leya-collection-icon"
+    width="32"
+    height="32"
+    loading="lazy"
+  >
+
+  {% render 'text', fallback_text: placeholder, block: block %}
+</div>
+
+<style>
+  .leya-collection-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .leya-collection-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .leya-collection-title h3 {
+    margin: 0;
+  }
+</style>
 
 {% schema %}
 {
@@ -397,21 +429,3 @@
   ]
 }
 {% endschema %}
-
-h2 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-h2::before {
-  content: "";
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  background-image: url("https://cdn.shopify.com/s/files/1/0934/1861/9203/files/favicon.webp?v=1795128664");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
