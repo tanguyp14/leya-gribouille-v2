@@ -1,39 +1,47 @@
 
-
-
 {% assign placeholder = 'content.featured_products' | t %}
 {% assign placeholder = '<h3>' | append: placeholder | append: '</h3>' %}
 
-<div class="leya-collection-title">
-  <img
-    src="https://cdn.shopify.com/s/files/1/0934/1861/9203/files/favicon.webp?v=1795128664"
-    alt=""
-    class="leya-collection-icon"
-    width="32"
-    height="32"
-    loading="lazy"
+{% if block.settings.show_icon and block.settings.custom_icon != blank %}
+  <div
+    class="leya-collection-title"
+    style="
+      --leya-icon-size: {{ block.settings.icon_size }}px;
+      --leya-icon-gap: {{ block.settings.icon_spacing }}px;
+    "
   >
+    <img
+      src="{{ block.settings.custom_icon | image_url: width: 300 }}"
+      alt=""
+      class="leya-collection-icon"
+      width="{{ block.settings.icon_size }}"
+      height="{{ block.settings.icon_size }}"
+      loading="lazy"
+    >
 
+    {% render 'text', fallback_text: placeholder, block: block %}
+  </div>
+{% else %}
   {% render 'text', fallback_text: placeholder, block: block %}
-</div>
+{% endif %}
 
 <style>
   .leya-collection-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--leya-icon-gap);
   }
 
   .leya-collection-icon {
-    width: 32px;
-    height: 32px;
+    display: block;
+    width: var(--leya-icon-size);
+    height: var(--leya-icon-size);
     object-fit: contain;
     flex-shrink: 0;
-    display: block;
   }
 
-  .leya-collection-title h3 {
-    margin: 0;
+  .leya-collection-title > :not(.leya-collection-icon) {
+    min-width: 0;
   }
 </style>
 
@@ -46,6 +54,44 @@
       "type": "richtext",
       "id": "text",
       "label": "t:settings.text"
+    },
+    {
+      "type": "header",
+      "content": "Icône personnalisée"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Afficher une icône",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_icon",
+      "label": "Choisir une icône",
+      "visible_if": "{{ block.settings.show_icon }}"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Taille de l'icône",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 32,
+      "visible_if": "{{ block.settings.show_icon }}"
+    },
+    {
+      "type": "range",
+      "id": "icon_spacing",
+      "label": "Espacement avec le titre",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.show_icon }}"
     },
     {
       "type": "header",
