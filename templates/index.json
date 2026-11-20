@@ -1933,10 +1933,11 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>Affiches</h3>",
-                "show_icon": false,
-                "icon_size": 32,
-                "icon_spacing": 12,
-                "icon_margin_left": 0,
+                "show_icon": true,
+                "custom_icon": "shopify://shop_images/favicon_5d1b7bab-4f20-4ef8-82ac-6a92ffa9c3c1.webp",
+                "icon_size": 46,
+                "icon_spacing": 10,
+                "icon_margin_left": 40,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1953,7 +1954,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 40,
+                "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
