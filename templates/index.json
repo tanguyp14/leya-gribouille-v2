@@ -233,6 +233,10 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>T-shirts animal lovers</h3>",
+                "show_icon": true,
+                "custom_icon": "shopify://shop_images/favicon_5d1b7bab-4f20-4ef8-82ac-6a92ffa9c3c1.webp",
+                "icon_size": 50,
+                "icon_spacing": 10,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -600,6 +604,9 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>Best-Seller</h3>",
+                "show_icon": false,
+                "icon_size": 32,
+                "icon_spacing": 12,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1924,6 +1931,9 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>Affiches</h3>",
+                "show_icon": false,
+                "icon_size": 32,
+                "icon_spacing": 12,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -2216,6 +2226,9 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>Textiles</h3>",
+                "show_icon": false,
+                "icon_size": 32,
+                "icon_spacing": 12,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
