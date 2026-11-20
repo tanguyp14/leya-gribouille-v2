@@ -625,7 +625,7 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 40,
+                "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
@@ -800,7 +800,7 @@
         "rows_gap": 12,
         "icons_style": "chevron",
         "icons_shape": "circle",
-        "section_width": "full-width",
+        "section_width": "page-width",
         "horizontal_alignment": "center",
         "gap": 40,
         "color_scheme": "scheme-464773f4-a825-42d5-b3f1-3cbc85c5ebd8",
