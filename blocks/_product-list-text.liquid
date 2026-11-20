@@ -8,6 +8,7 @@
     style="
       --leya-icon-size: {{ block.settings.icon_size }}px;
       --leya-icon-gap: {{ block.settings.icon_spacing }}px;
+      --leya-icon-margin-left: {{ block.settings.icon_margin_left }}px;
     "
   >
     <img
@@ -30,6 +31,8 @@
     display: flex;
     align-items: center;
     gap: var(--leya-icon-gap);
+    padding-left: var(--leya-icon-margin-left);
+    box-sizing: border-box;
   }
 
   .leya-collection-icon {
@@ -91,6 +94,17 @@
       "step": 2,
       "unit": "px",
       "default": 12,
+      "visible_if": "{{ block.settings.show_icon }}"
+    },
+    {
+      "type": "range",
+      "id": "icon_margin_left",
+      "label": "Marge gauche de l'icône",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
       "visible_if": "{{ block.settings.show_icon }}"
     },
     {
