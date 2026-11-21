@@ -231,6 +231,7 @@
             "product_list_text_7bi9Fk": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
+              "disabled": true,
               "settings": {
                 "text": "<h3>BOTANICAL TILES</h3>",
                 "show_icon": true,
