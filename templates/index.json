@@ -184,8 +184,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Découvrir la collection ANIMAL LOVERS",
-            "link": "shopify://collections/animals-lovers",
+            "label": "Découvrir les nouveautés",
+            "link": "shopify://collections/nouveautes",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
