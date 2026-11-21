@@ -2182,7 +2182,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "TOUT DÉCOUVRIR",
-            "link": "shopify://collections/textiles",
+            "link": "shopify://collections/animals-lovers",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
