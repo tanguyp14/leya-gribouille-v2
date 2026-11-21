@@ -422,7 +422,7 @@
         "collection": "noir-et-blanc",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
-        "max_products": 5,
+        "max_products": 6,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "44cqw",
@@ -751,7 +751,7 @@
                     "case": "none",
                     "color": "var(--color-primary)",
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 10,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
