@@ -41,7 +41,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>rejoins la newsletter &nbsp;et obtiens -10<strong>%</strong> SUR TA COMMANDE !</p>",
+                "text": "<p>rejoins la newsletter et ne loupe aucune info !</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
