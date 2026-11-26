@@ -17,7 +17,7 @@
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
-            "text": "<em>Livraison dans</em><em><strong> toute l'europe !</strong></em>",
+            "text": "<strong>black friday ! </strong><em>Livraison dans</em><em><strong> toute l'europe !</strong></em>",
             "link": "shopify://collections/best-seller",
             "font": "var(--font-heading--family)",
             "font_size": "1.5rem",
