@@ -142,7 +142,7 @@
         "text_HGUxHU": {
           "type": "text",
           "settings": {
-            "text": "<p>&nbsp;AFFICHE. &nbsp; <strong>T-SHIRT. &nbsp; </strong>CASQUETTE<strong>. &nbsp; TASSE. &nbsp; </strong>TOTEBAG. &nbsp;<strong> PACK MINIS AFFICHES.</strong></p>",
+            "text": "<p><em>BLACK FRIDAY ! &nbsp; &nbsp;</em> une affiche achetée = <strong>une offerte</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -171,7 +171,7 @@
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
-        "color_scheme": "scheme-464773f4-a825-42d5-b3f1-3cbc85c5ebd8",
+        "color_scheme": "scheme-5",
         "padding-block-start": 10,
         "padding-block-end": 7,
         "gap_between_elements": 24
