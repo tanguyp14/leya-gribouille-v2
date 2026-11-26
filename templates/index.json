@@ -232,7 +232,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Affiches</h3>",
+                "text": "<h3>LES Affiches</h3>",
                 "show_icon": true,
                 "custom_icon": "shopify://shop_images/favicon_5d1b7bab-4f20-4ef8-82ac-6a92ffa9c3c1.webp",
                 "icon_size": 46,
@@ -471,7 +471,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Découvrir les nouveautés",
+            "label": "Découvrir tous les t-shirts",
             "link": "shopify://collections/nouveautes",
             "open_in_new_tab": false,
             "style_class": "button",
@@ -519,7 +519,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>BOTANICAL TILES</h3>",
+                "text": "<h3>les t-shirts&nbsp;</h3>",
                 "show_icon": true,
                 "custom_icon": "shopify://shop_images/favicon_5d1b7bab-4f20-4ef8-82ac-6a92ffa9c3c1.webp",
                 "icon_size": 46,
@@ -733,9 +733,9 @@
       "name": "Featured collection",
       "settings": {
         "collection": "t-shirts",
-        "layout_type": "carousel",
+        "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 6,
+        "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "44cqw",
