@@ -543,6 +543,32 @@
                   },
                   "blocks": {}
                 },
+                "text_wiiaWV": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p><strong>Une affiche achetée = une offerte !</strong></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-primary)",
+                    "background": false,
+                    "background_color": "#ff6e5842",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "price": {
                   "type": "price",
                   "settings": {
@@ -582,6 +608,7 @@
               },
               "block_order": [
                 "product_title_NzQUxN",
+                "text_wiiaWV",
                 "price",
                 "swatches_4339Te"
               ]
