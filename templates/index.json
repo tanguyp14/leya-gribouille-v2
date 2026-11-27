@@ -233,7 +233,7 @@
               "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>LES Affiches</h3>",
-                "show_icon": true,
+                "show_icon": false,
                 "custom_icon": "shopify://shop_images/favicon_5d1b7bab-4f20-4ef8-82ac-6a92ffa9c3c1.webp",
                 "icon_size": 46,
                 "icon_spacing": 10,
