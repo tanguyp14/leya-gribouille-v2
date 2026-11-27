@@ -451,7 +451,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>mini affiches</h3>",
+                "text": "<h3>petites affiches</h3>",
                 "show_icon": false,
                 "icon_size": 32,
                 "icon_spacing": 12,
