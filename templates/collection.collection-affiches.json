@@ -9,6 +9,47 @@
  */
 {
   "sections": {
+    "marquee_YjB8XA": {
+      "type": "marquee",
+      "blocks": {
+        "text_aRXtaW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>-10€ sur les<strong> grands formats</strong><em><strong> </strong></em><em>&nbsp; &nbsp; </em>&nbsp;une affiche 30 x 40 cm achetée = <strong>une offerte</strong></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "tight",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "nowrap",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_aRXtaW"
+      ],
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "color_scheme": "scheme-5",
+        "padding-block-start": 10,
+        "padding-block-end": 7,
+        "gap_between_elements": 24
+      }
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -606,47 +647,6 @@
         "color_scheme": "scheme-1",
         "padding-block-start": 48,
         "padding-block-end": 48
-      }
-    },
-    "marquee_YjB8XA": {
-      "type": "marquee",
-      "blocks": {
-        "text_aRXtaW": {
-          "type": "text",
-          "settings": {
-            "text": "<p><em>BLACK FRIDAY ! &nbsp; &nbsp;</em> une affiche achetée = <strong>une offerte</strong></p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2rem",
-            "line_height": "tight",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "nowrap",
-            "color": "var(--color-foreground-heading)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_aRXtaW"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "color_scheme": "scheme-5",
-        "padding-block-start": 10,
-        "padding-block-end": 7,
-        "gap_between_elements": 24
       }
     }
   },
