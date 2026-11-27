@@ -342,6 +342,32 @@
               },
               "blocks": {}
             },
+            "text_t6hKML": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p><strong>-20% sur le 2ème t-shirt</strong></p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1.25rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#ff6e5842",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "price_YY4jzq": {
               "type": "price",
               "name": "t:names.product_price",
@@ -369,6 +395,7 @@
           "block_order": [
             "product_card_gallery_7hwBjx",
             "product_title_RDcC6H",
+            "text_t6hKML",
             "price_YY4jzq"
           ]
         }
