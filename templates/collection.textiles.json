@@ -9,6 +9,47 @@
  */
 {
   "sections": {
+    "marquee_wfczhT": {
+      "type": "marquee",
+      "blocks": {
+        "text_EMFnaY": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>-20%</strong> sur le 2ème t-shirt</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "2rem",
+            "line_height": "tight",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "nowrap",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_EMFnaY"
+      ],
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "color_scheme": "scheme-5",
+        "padding-block-start": 10,
+        "padding-block-end": 7,
+        "gap_between_elements": 24
+      }
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -610,6 +651,7 @@
     }
   },
   "order": [
+    "marquee_wfczhT",
     "section",
     "main",
     "product_list_XpCrj6"
