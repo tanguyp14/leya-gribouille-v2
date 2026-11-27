@@ -235,6 +235,7 @@
             "product_list_text_Kcdwtc": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
+              "disabled": true,
               "settings": {
                 "text": "<h3>T-shirts</h3>",
                 "show_icon": false,
@@ -389,7 +390,7 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
+        "padding-block-start": 2,
         "padding-block-end": 48
       }
     },
