@@ -574,7 +574,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>Une affiche achetée = une offerte !</strong></p>",
+                    "text": "<p><strong>Une affiche 30x40 cm achetée = une offerte !</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
