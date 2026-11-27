@@ -59,21 +59,6 @@
     "product_list_VtNnP8": {
       "type": "product-list",
       "blocks": {
-        "button_p8frfp": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Voir toutes les AFFICHES",
-            "link": "shopify://collections/affiches",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "custom",
-            "custom_width_mobile": 66
-          },
-          "blocks": {}
-        },
         "static-header": {
           "type": "_product-list-content",
           "static": true,
@@ -320,15 +305,12 @@
           ]
         }
       },
-      "block_order": [
-        "button_p8frfp"
-      ],
       "name": "Featured collection",
       "settings": {
         "collection": "affiches",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 15,
+        "max_products": 16,
         "columns": 5,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
