@@ -326,7 +326,7 @@
                     "alignment": "left",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
-                    "font_size": "1.25rem",
+                    "font_size": "1rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -396,7 +396,7 @@
       "settings": {
         "layout_type": "grid",
         "product_card_size": "large",
-        "mobile_product_card_size": "large",
+        "mobile_product_card_size": "small",
         "enable_infinite_scroll": false,
         "products_per_page": 20,
         "product_grid_width": "centered",
@@ -591,7 +591,7 @@
       "settings": {
         "collection": "sac-et-tote-bags",
         "layout_type": "grid",
-        "carousel_on_mobile": true,
+        "carousel_on_mobile": false,
         "max_products": 8,
         "columns": 5,
         "mobile_columns": "2",
